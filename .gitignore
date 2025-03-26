@@ -1,1 +1,7 @@
-ablebot/
+ableBot/
+
+utils/__pycache__/
+utils/.env
+
+company_info.txt
+
