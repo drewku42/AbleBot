@@ -5,3 +5,4 @@ utils/.env
 
 company_info.txt
 
+chroma_langchain_db/
