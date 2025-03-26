@@ -7,7 +7,6 @@
     - RAG: Takes a user query at run time and retreieves the relevant data from the index, then passes it to the model.
 
 ## A Common Pipeline
-Indexing Phase:
 1. Load: First we need to load our data using a `Document Loader`.
 2. Split: We need to break these documents into smaller chunks using a `Text Splitter`. This is useful for indexing and passing data into a model. 
     - Note: Larger chunks are harder to search over and won't fit in a model's finite context window.
