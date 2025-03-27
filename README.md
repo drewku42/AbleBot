@@ -5,11 +5,11 @@
 2. Install Python if necessary: https://www.python.org/downloads/
 3. Create a virtual environment: `python3 -m venv <name>`
 4. Install Python dependencies: `pip install -r requirements.txt`
-5. Run the scraper on the website of your choice, i.e. https://able.co :
-   `python3 streamlit_chatbot/scraper.py`
+5. Run the scraper on the website of your choice, i.e. https://able.co : `python3 streamlit_chatbot/scraper.py`
    - Note: Set the sitemap URL in the scraper module itself (line 8). Format: https://able.co/sitemap.xml
-6. Start the chatbot: `streamlit run streamlit_chatbot/app.py`
-7. Ask away!
+7. Create a `.env` file in the `streamlit_chatbot` directory, and add your OpenAI API Key. Ex: `OPENAI_API_KEY=sk-proj-...`
+8. Start the chatbot: `streamlit run streamlit_chatbot/app.py`
+9. Ask away!
 
 ## RAG w/ LangChain Overview
 - Retrieval Augmented Generation (RAG)
