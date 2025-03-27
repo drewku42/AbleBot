@@ -11,6 +11,12 @@
 8. Start the chatbot: `streamlit run streamlit_chatbot/app.py`
 9. Ask away!
 
+## Scraping the Data
+1. Fetch URls from Sitemap: The script fetches URLs from the sitemap at https://able.co/sitemap.xml .
+2. Scrape Page Content: For each URL, the scraper extracts the main text content while removing navigation, footer, and script elements.
+3. Store Scrapted Data: The script collects text data from all pages and saves it to a file called `company_info.txt`.
+4. Run the Scraper: Execute the script to start scraping and save the data locally.
+
 ## RAG w/ LangChain Overview
 - Retrieval Augmented Generation (RAG)
 - A typical RAG application has two main components, indexing and retreival augmented generation
@@ -25,8 +31,7 @@
 4. Retreive: Given a user input, releveant splits are retrieved from storage using a `Retriever`.
 5. Generate: A `ChatModel` (or LLM) produces an answer using a prompt that includes both the question and retreived data.
 
-## Scraping the Data
-1. Fetch URls from Sitemap: The script fetches URLs from the sitemap at https://able.co/sitemap.xml .
-2. Scrape Page Content: For each URL, the scraper extracts the main text content while removing navigation, footer, and script elements.
-3. Store Scrapted Data: The script collects text data from all pages and saves it to a file called `company_info.txt`.
-4. Run the Scraper: Execute the script to start scraping and save the data locally.
+## Future Improvements
+- Citing Information: A great way to prevent hallucinations is to implement citations, where a chatbot provides a reference to the specific chunk or document where it pulls information from. This makes it easy to verify the information that the model provides.
+- System Prompts: System prompts can help a model remember its own identity. For example, we could tell the chatbot that it has a name like AbleBot, that it works for Able and answers questions from Able's customers, etc.
+- Optimal Text Splitting: When the RAG pipeline is setup we define a few important parameters. The `chunk size` defines the number of characters per chunk, and the `chunk overlap` defines the number of characters that should overlap between adjacent chunks. Optimizing these numbers could improve model recall and accuracy of answers. I did not test it much for this prototype.
