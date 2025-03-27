@@ -5,7 +5,7 @@
 2. Install Python if necessary: https://www.python.org/downloads/
 3. Create a virtual environment: `python3 -m venv <name>`
 4. Install Python dependencies: `pip install -r requirements.txt`
-5. Run the scraper on the website of your choice, i.e. Able:
+5. Run the scraper on the website of your choice, i.e. https://able.co :
    `python3 streamlit_chatbot/scraper.py`
    - Note: Set the sitemap URL in the scraper module itself (line 8)
 6. Start the chatbot: `streamlit run streamlit_chatbot/app.py`
