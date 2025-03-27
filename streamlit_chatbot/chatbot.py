@@ -8,6 +8,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# TODO Define a system prompt !!!
+
+# TODO Citations ? ? ?
+
 class RAGChatbot:
     def __init__(self, doc_path="streamlit_chatbot/company_info.txt", model_name="gpt-3.5-turbo"):
         self.doc_path = doc_path
@@ -18,7 +22,7 @@ class RAGChatbot:
         # Load and process documents
         loader = TextLoader(self.doc_path)
         documents = loader.load()
-        text_splitter = CharacterTextSplitter(chunk_size=2000, chunk_overlap=500)
+        text_splitter = CharacterTextSplitter(chunk_size=5000, chunk_overlap=500)
         docs = text_splitter.split_documents(documents)
 
         # Convert text into embeddings
