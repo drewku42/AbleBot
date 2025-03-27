@@ -6,7 +6,7 @@ from chatbot import RAGChatbot
 chatbot = RAGChatbot()
 
 st.title("AbleBot")
-st.subheader("_____")
+st.markdown("Answering questions about the software company, [Able](https://able.co)!")
 
 # Store chat history
 if "messages" not in st.session_state:
