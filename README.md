@@ -7,7 +7,7 @@
 4. Install Python dependencies: `pip install -r requirements.txt`
 5. Run the scraper on the website of your choice, i.e. https://able.co :
    `python3 streamlit_chatbot/scraper.py`
-   - Note: Set the sitemap URL in the scraper module itself (line 8)
+   - Note: Set the sitemap URL in the scraper module itself (line 8). Format: https://able.co/sitemap.xml
 6. Start the chatbot: `streamlit run streamlit_chatbot/app.py`
 7. Ask away!
 
