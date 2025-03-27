@@ -1,4 +1,4 @@
-# 🌟🤖 AbleBot QnA Chatbot 🤖🌟
+# 🌟🤖 AbleBot > The Able QnA Chatbot 🤖🌟
 
 ## Setup
 1. Navigate to the directory of your choice, and use `git clone https://github.com/drewku42/AbleBot.git`
