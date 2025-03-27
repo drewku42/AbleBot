@@ -2,7 +2,7 @@
 
 ## Setup
 1. Navigate to the directory of your choice, and use `git clone https://github.com/drewku42/AbleBot.git`
-2. Install Python (Python)[https://www.python.org/downloads/] if necessary.
+2. Install Python if necessary: https://www.python.org/downloads/
 3. Create a virtual environment: `python3 -m venv <name>`
 4. Install Python dependencies: `pip install -r requirements.txt`
 5. Run the scraper on the website of your choice, i.e. Able:
