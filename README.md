@@ -6,8 +6,9 @@
 3. Install Python dependencies: `pip install -r requirements.txt`
 4. Run the scraper on the website of your choice, i.e. Able:
    `python3 streamlit_chatbot/scraper.py`
-5. Start the chatbot: `streamlit run streamlit_chatbot/app.py`
-6. Ask away!
+   - Note: Set the sitemap URL in the scraper module itself (line 8)
+6. Start the chatbot: `streamlit run streamlit_chatbot/app.py`
+7. Ask away!
 
 ## RAG w/ LangChain Overview
 - Retrieval Augmented Generation (RAG)
