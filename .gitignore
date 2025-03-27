@@ -1,6 +1,6 @@
 ableBot/
 
-utils/__pycache__/
-utils/.env
+streamlit_chatbot/__pycache__
+streamlit_chatbot/.env
 
 company_info.txt
