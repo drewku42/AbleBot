@@ -25,4 +25,8 @@
 4. Retreive: Given a user input, releveant splits are retrieved from storage using a `Retriever`.
 5. Generate: A `ChatModel` (or LLM) produces an answer using a prompt that includes both the question and retreived data.
 
-## Building the Data
+## Scraping the Data
+1. Fetch URls from Sitemap: The script fetches URLs from the sitemap at https://able.co/sitemap.xml .
+2. Scrape Page Content: For each URL, the scraper extracts the main text content while removing navigation, footer, and script elements.
+3. Store Scrapted Data: The script collects text data from all pages and saves it to a file called `company_info.txt`.
+4. Run the Scraper: Execute the script to start scraping and save the data locally.
