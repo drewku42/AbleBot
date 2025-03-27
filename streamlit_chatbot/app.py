@@ -1,9 +1,6 @@
 import streamlit as st
 from chatbot import RAGChatbot
 
-# TODO fix chat messages, dont want to see entire session state dict !!!
-# https://docs.streamlit.io/develop/api-reference/caching-and-state/st.session_state
-
 # Initialize chatbot
 chatbot = RAGChatbot()
 
@@ -14,21 +11,26 @@ st.subheader("_____")
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-print(st.session_state)
+if "pending_query" not in st.session_state:
+    st.session_state.pending_query = ""
 
-# Display previous messa🙋‍♀️ges
+# Display previous messages
 for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
 
-query = st.text_input("Ask a question:")
-if query:
-    response = chatbot.get_response(query)
-    print("Debugging response: ", response)
+# Input box remains at the bottom
+query = st.text_input("Ask a question:", key="user_input", value="", on_change=lambda: st.session_state.update(pending_query=st.session_state.user_input))
 
-    # Append user & assistant messages to session state
-    st.session_state.messages.append({"role": "user", "content": query})
+# Process new query
+if st.session_state.pending_query:
+    response = chatbot.get_response(st.session_state.pending_query)
+    
+    # Store messages
+    st.session_state.messages.append({"role": "user", "content": st.session_state.pending_query})
     st.session_state.messages.append({"role": "assistant", "content": response["result"]})
 
-    # Display messages in chat
-    st.chat_message("user").write(query)
-    st.chat_message("assistant").write(response["result"])
+    # Clear query before rerunning
+    st.session_state.pending_query = ""
+
+    # Refresh to display updated messages
+    st.rerun()
