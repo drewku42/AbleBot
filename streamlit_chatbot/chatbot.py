@@ -13,7 +13,7 @@ load_dotenv()
 # TODO Citations ? ? ?
 
 class RAGChatbot:
-    def __init__(self, doc_path="streamlit_chatbot/company_info.txt", model_name="gpt-3.5-turbo"):
+    def __init__(self, doc_path="company_info.txt", model_name="gpt-3.5-turbo"):
         self.doc_path = doc_path
         self.model_name = model_name
         self.qa_chain = self._initialize_pipeline()
